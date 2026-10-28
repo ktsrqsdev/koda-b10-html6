@@ -84,5 +84,7 @@ article p {
 
     article p {
         text-align: left;
+        text-align: justify;
+
     }
 }
