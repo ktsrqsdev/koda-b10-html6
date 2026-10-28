@@ -6,7 +6,9 @@
 
 body {
     background-color: oklch(94.3% 0.029 294.588);
+    color: oklch(25% 0.03 294);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
 }
 
 nav {
@@ -18,7 +20,8 @@ nav {
     background-color: oklch(49.1% 0.27 292.581);
 }
 
-nav p, nav a {
+nav p,
+nav a {
     color: oklch(96.9% 0.016 293.756);
     font-size: 16px;
     font-weight: 600;
@@ -30,6 +33,26 @@ nav ul {
     display: flex;
     gap: 20px;
     list-style: none;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+}
+
+article h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+article p {
+    font-size: 1rem;
+    text-align: justify;
 }
 
 @media screen and (width < 765px) {
@@ -48,5 +71,18 @@ nav ul {
 
     nav a {
         font-size: 18px;
+    }
+
+    article {
+        gap: 20px;
+        padding: 36px 20px 56px;
+    }
+
+    article h1 {
+        font-size: 2rem;
+    }
+
+    article p {
+        text-align: left;
     }
 }
