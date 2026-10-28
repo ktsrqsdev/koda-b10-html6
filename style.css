@@ -1,0 +1,75 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: oklch(94.3% 0.029 294.588);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+    position: relative;
+    height: 64px;
+    background-color: oklch(49.1% 0.27 292.581);
+}
+
+nav p, nav a {
+    color: oklch(96.9% 0.016 293.756);
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+nav p {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+}
+
+nav ul {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+@media screen and (width < 765px) {
+    nav {
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    nav p,
+    nav ul {
+        position: static;
+        transform: none;
+    }
+
+    nav p {
+        margin-bottom: 15px;
+    }
+
+    nav li {
+        display: block;
+        margin: 0 0 10px;
+    }
+
+    nav li:last-child {
+        margin-bottom: 0;
+    }
+
+    nav a {
+        font-size: 18px;
+    }
+}
