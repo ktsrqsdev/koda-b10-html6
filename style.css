@@ -10,8 +10,11 @@ body {
 }
 
 nav {
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     height: 64px;
+    padding: 0 20px;
     background-color: oklch(49.1% 0.27 292.581);
 }
 
@@ -23,50 +26,24 @@ nav p, nav a {
     text-decoration: none;
 }
 
-nav p {
-    position: absolute;
-    top: 50%;
-    left: 20px;
-    transform: translateY(-50%);
-}
-
 nav ul {
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
+    display: flex;
+    gap: 20px;
     list-style: none;
-}
-
-nav li {
-    display: inline-block;
-    margin-left: 20px;
 }
 
 @media screen and (width < 765px) {
     nav {
+        flex-direction: column;
         height: auto;
         padding: 20px;
-        text-align: center;
+        gap: 15px;
     }
-    
-    nav p,
+
     nav ul {
-        position: static;
-        transform: none;
-    }
-
-    nav p {
-        margin-bottom: 15px;
-    }
-
-    nav li {
-        display: block;
-        margin: 0 0 10px;
-    }
-
-    nav li:last-child {
-        margin-bottom: 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 
     nav a {
